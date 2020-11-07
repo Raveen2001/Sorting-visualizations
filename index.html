@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sort Visualization</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="libraries/p5.js"></script>
+    <script src="libraries/p5.dom.js"></script>
+    <script src="libraries/p5.sound.js"></script>
+    <script src="sort.js"></script>
+    <script src="sketch.js"></script>
+    <script src="script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <h1 style="text-align: center;">Sort Visualization</h1>
+      <form class="form-inputs">
+        <div class="inputSlider">
+          <label for="sizeAndSpeed" style="display: block;"
+            >Size and Speed</label
+          >
+          <input
+            type="range"
+            class="form-control-range"
+            id="sizeAndSpeed"
+            min="5"
+            max="20"
+            onchange="changeSlider(value)"
+          />
+        </div>
+        <div class="btn-group dropup">
+          <button
+            type="button"
+            id="options"
+            class="btn btn-primary dropdown-toggle"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Select sort Algo
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Bubble Sort</a>
+            <a class="dropdown-item" href="#">Merge Sort</a>
+            <a class="dropdown-item" href="#">Quick Sort</a>
+            <a class="dropdown-item" href="#">Heap Sort</a>
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="btn btn-success startBtn"
+          id="startBtn"
+          onclick="startAlgo()"
+        >
+          Start
+        </button>
+        <button
+          type="reset"
+          class="btn btn-secondary resetBtn"
+          onclick="resetSketch()"
+        >
+          Reset
+        </button>
+      </form>
+    </div>
+  </body>
+  <script>
+    let stop = false;
+    $(document).ready(function () {
+      $(".dropdown-menu a").click(function () {
+        txt = $(this).text();
+        $("#options").text(txt);
+      });
+      $(".resetBtn").click(function () {
+        stop = true;
+        count = 0;
+      });
+    });
+  </script>
+</html>

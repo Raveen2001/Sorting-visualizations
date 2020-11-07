@@ -1,0 +1,36 @@
+.form-control-range {
+  width: 10.2% !important;
+  display: inline-block !important;
+  color: black;
+  float: left;
+}
+.form-inputs {
+  position: relative;
+  top: 80vh !important;
+  margin-left: 32%;
+}
+.dropup {
+  top: -1.6em;
+  left: 40px;
+  float: left;
+  min-width: 10em;
+  position: relative;
+}
+
+.startBtn {
+  position: relative;
+  float: left;
+  top: -1.6em;
+  width: 100px !important;
+  left: 7em;
+  border-radius: 2em !important;
+}
+
+.resetBtn {
+  position: relative;
+  float: left;
+  top: -1.6em;
+  width: 100px !important;
+  left: 9em;
+  border-radius: 2em !important;
+}
