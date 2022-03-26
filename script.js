@@ -25,10 +25,6 @@ async function startAlgo() {
       await quickSort(values, 0, values.length - 1);
       break;
 
-    case "Heap Sort":
-      console.log("Heap Sort");
-      break;
-
     default:
       alert("Select a Sorting Algorithm");
   }

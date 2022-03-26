@@ -20,6 +20,7 @@ function setup() {
   textSize(32);
 }
 
+var ii = 0;
 function draw() {
   background("#1b1b1b");
   text("#" + count, width - 110, 30);
@@ -34,5 +35,4 @@ function draw() {
     }
     rect(i * w, height - values[i], w, values[i]);
   }
-  console.log("hello");
 }
